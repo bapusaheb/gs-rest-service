@@ -26,6 +26,30 @@ public class WordController {
 	     return (Arrays.stream(count).boxed().collect(Collectors.toList()).stream().
 	                filter(o -> o.intValue() % 2!=0).count() > 1 ? false : true);
     }
-	
+	public class Response {
+		private String words;
+		private boolean palindrome;
+		private boolean anagramOfPalindrome;
+		public String getWords() {
+			return words;
+		}
+		public void setWords(String words) {
+			this.words = words;
+		}
+		public boolean isPalindrome() {
+			return palindrome;
+		}
+		public void setPalindrome(boolean palindrome) {
+			this.palindrome = palindrome;
+		}
+		public boolean isAnagramOfPalindrome() {
+			return anagramOfPalindrome;
+		}
+		public void setAnagramOfPalindrome(boolean anagramOfPalindrome) {
+			this.anagramOfPalindrome = anagramOfPalindrome;
+		}
+
+
+		}
 	
 }
